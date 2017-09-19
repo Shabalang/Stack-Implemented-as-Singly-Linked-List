@@ -1,0 +1,43 @@
+from stack_Queue import Stack
+
+def main():
+
+    print("-------Test Stack----------")
+    print("------Test push-------")
+    my_stack = Stack()
+    test_list = [1, 2, 3, 4, -2000000, 'a', 500000, 50]
+
+    for i in test_list:
+        my_stack.push(i)
+    print("-------Push Done------")
+    print("-------Dump stack-----")
+    for i in my_stack:
+        print(i.data)
+    print("-----Dump stack Done---")
+    print("----check count-------")
+    print("should be: 8")
+    print(my_stack.length())
+    print("-----check count Done--")
+    print("-------Test pop $ print remaining stack--------")
+
+    my_stack.pop()
+    for i in my_stack:
+        print(i.data)
+    print("-----Test pop Done-----")
+    print("-----Test search-------")
+    x = my_stack.stack_search('a')
+    print(x)
+    print("---Test search Done---")
+
+    print("-----Test pop - full stack & print what is being poped-----")
+    while my_stack.length() > 0:
+        x = my_stack.pop()
+        print(x)
+    print("-----Test pop Done-----")
+    print("-----Test Empty Stack-----")
+    for i in my_stack:
+        print(i.data)
+    print("---------Done---------")
+
+if __name__ == "__main__":
+    main()
